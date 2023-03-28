@@ -11,12 +11,13 @@ const App = (props) => {
   const start = () => {
     setTimer(
       setInterval(() => {
-        setTime((preValue) => preValue + 1);
-      }, 1)
+        setTime((preValue) => preValue + 100);
+      }, 100)
     );
   };
 
   const stop = () => {
+    setTimer("");
     clearInterval(timer);
   };
 
