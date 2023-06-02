@@ -1,23 +1,23 @@
-import Container from "./components/Container/Container";
-import Timer from "./components/Timer/Timer";
-import Button from "./components/Button/Button";
-import { useState, useEffect } from "react";
-import styles from "./App.module.scss";
+import Container from './components/Container/Container';
+import Timer from './components/Timer/Timer';
+import Button from './components/Button/Button';
+import { useState, useEffect } from 'react';
+import styles from './App.module.scss';
 
 const App = (props) => {
   const [time, setTime] = useState(0);
-  const [timer, setTimer] = useState("");
+  const [timer, setTimer] = useState('');
 
   const start = () => {
     setTimer(
       setInterval(() => {
-        setTime((preValue) => preValue + 100);
-      }, 100)
+        setTime((preValue) => preValue + 10);
+      }, 10)
     );
   };
 
   const stop = () => {
-    setTimer("");
+    setTimer('');
     clearInterval(timer);
   };
 
